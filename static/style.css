@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef4ff, #f8fbff);
+  color: #0f172a;
+}
+
+.container {
+  max-width: 1080px;
+  margin: auto;
+  padding: 32px 20px 50px;
+}
+
+.hero {
+  text-align: center;
+  padding: 36px 24px;
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 2.2rem;
+}
+
+.hero p {
+  margin: 0;
+  opacity: 0.95;
+  font-size: 1.05rem;
+}
+
+.top-buttons {
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  padding: 26px;
+  margin-bottom: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.12);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+textarea {
+  width: 100%;
+  min-height: 220px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 14px;
+  resize: vertical;
+  margin-bottom: 16px;
+  font-size: 15px;
+  background: #f8fafc;
+}
+
+input[type="file"] {
+  margin-bottom: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.28);
+}
+
+.secondary {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-right: 10px;
+}
+
+.secondary:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.hidden {
+  display: none;
+}
+
+.result-legitimate {
+  background: #dcfce7;
+  color: #166534;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.result-phishing {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #dbeafe;
+  border-top: 5px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 18px auto;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}

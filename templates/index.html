@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MailSentinel AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>MailSentinel AI</h1>
+      <p>Phishing Detection Using CNN and MLP</p>
+      <div class="top-buttons">
+        <a href="{{ project_doc_url }}" target="_blank" class="btn secondary">View Project Documentation</a>
+        <a href="{{ readme_url }}" target="_blank" class="btn secondary">Read README</a>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Analyze Email Text</h2>
+      <textarea id="emailText" placeholder="Paste the email message here..."></textarea>
+      <button class="btn primary" onclick="submitText()">Analyze Text</button>
+    </section>
+
+    <section class="card">
+      <h2>Upload Email PDF</h2>
+      <input type="file" id="pdfFile" accept=".pdf">
+      <button class="btn primary" onclick="submitPDF()">Upload & Analyze</button>
+    </section>
+
+      <section class="card hidden" id="loadingCard">
+          <h2>Processing Request</h2>
+          <div class="loader"></div>
+          <p id="loadingText">Extracting and Analyzing email content. Please wait...</p>
+      </section>
+
+    <section class="card hidden" id="resultCard">
+      <h2>Analysis Result</h2>
+      <div id="resultBadge"></div>
+      <p><strong>Confidence:</strong> <span id="confidence"></span>%</p>
+      <p><strong>Confidence Level:</strong> <span id="confidenceLevel"></span></p>
+      <p><strong>Probability:</strong> <span id="probability"></span></p>
+      <p><strong>Risk Level:</strong> <span id="riskLevel"></span></p>
+      <p><strong>Summary:</strong> <span id="summary"></span></p>
+      <details>
+        <summary>View Processed Text</summary>
+        <pre id="processedText"></pre>
+      </details>
+      <details id="pdfPreviewBox" class="hidden">
+        <summary>View Extracted PDF Text Preview</summary>
+        <pre id="pdfPreview"></pre>
+      </details>
+    </section>
+
+    <section class="card hidden" id="errorCard">
+      <h2>Error</h2>
+      <p id="errorMessage"></p>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
